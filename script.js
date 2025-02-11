@@ -1,23 +1,64 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".section");
-  
-    // Intersection Observer setup
-    const observer = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // Stop observing after it's shown
-          }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show"); // Reset animation when out of view
+            }
         });
-      },
-      {
-        root: null, // Observe relative to the viewport
-        threshold: 0.3, // Trigger when 30% of the section is visible
-      }
-    );
-  
-    // Observe each section
-    sections.forEach((section) => observer.observe(section));
-  });
-  
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".hidden").forEach(section => {
+        observer.observe(section);
+    });
+});
+
+
+
+const track = document.querySelector(".skills-track");
+
+track.addEventListener("mouseover", () => {
+    track.style.animationPlayState = "paused";
+});
+
+track.addEventListener("mouseleave", () => {
+    track.style.animationPlayState = "running";
+});
+
+
+function sendMessage() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let sendBtn = document.getElementById("sendBtn");
+
+    if (!name || !email || !message) {
+        alert("Please fill all fields.");
+        return;
+    }
+
+    sendBtn.textContent = "Sending...";
+    sendBtn.disabled = true;
+
+    fetch("http://localhost:3000/send-message", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            sendBtn.textContent = "Success ✅";
+        } else {
+            sendBtn.textContent = "Decline ❌";
+        }
+    })
+    .catch(() => {
+        sendBtn.textContent = "Decline ❌";
+    })
+    .finally(() => {
+        sendBtn.disabled = false;
+    });
+}
