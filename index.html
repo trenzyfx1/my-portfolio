@@ -1,3 +1,6 @@
+<!-- DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,12 +11,13 @@
         content="programer account, web developer, website developer, frontend developer, portfolio, frontend portfolio, web programer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/CSS Minifier/all.min.css">
+    <link rel="stylesheet" href="./CSS Minifier/style.css">
+    <link rel="stylesheet" href="./CSS Minifier/bot.css">
     <title>Christian Treasure | front end developer</title>
 </head>
 
-<body>
+<body id="index">
     <header class="desktop-header">
         <div class="potfolio">
             <a href="#"><img src="./images/logo.png" alt="home"></a>
@@ -221,7 +225,8 @@
             <div class="resume">
                 <button
                     onclick="window.open('//drive.google.com/file/d/16SGgIsbRDyb-vG9dxmMoWPD6bpqtQdX8/view?usp=drive_link', '_blank')"
-                    class="my-resume" type="button">View Resume <i class="fa-solid fa-circle-user"></i></button>
+                    class="my-resume" type="button">View Resume <i class="fa-solid fa-circle-user"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -316,46 +321,47 @@
         <div class="premium-container">
             <h2><span>PREMIUM</span> TOOLS</h2>
             <div class="tools-grid">
-                <div onclick="window.open('//www.figma.com/, _blank')" class="tool">
+                <div onclick="window.open('//www.figma.com/')" class="tool">
                     <img src="images/figma.png" alt="Figma">
                     <div class="tool-text">
                         <h3>Figma</h3>
                         <p>Design Tool</p>
                     </div>
                 </div>
-                <div onclick="window.open('//github.com/trenzyfx1, _blank')" class="tool">
-                    <img src="images/github.webp" alt="GitHub">
+                <div onclick="window.open('//github.com/trenzyfx1/')" class="tool">
+                    <img class="github" src="images/github.webp" alt="GitHub">
                     <div class="tool-text">
                         <h3>GitHub</h3>
                         <p>Repository</p>
                     </div>
                 </div>
-                <div onclick="window.open('//fontawesome.com/, _blank')" class="tool">
+                <div onclick="window.open('//fontawesome.com/')" class="tool">
                     <img src="images/fontawsome.png" alt="Font">
                     <div class="tool-text">
                         <h3>Font</h3>
                         <p>Fonts Download</p>
                     </div>
                 </div>
-                <div onclick="window.open('//www.notion.com/, _blank')" class="tool">
-                    <img src="images/Notion.webp" alt="Notion">
+                <div onclick="window.open('//www.lemonsqueezy.com/')" class="tool">
+                    <img src="./images/lemon.jpeg" alt="Lemon">
                     <div class="tool-text">
-                        <h3>Notion</h3>
-                        <p>Productivity Tool</p>
+                        <h3>Lemon</h3>
+                        <p>Payment Approval</p>
                     </div>
                 </div>
-                <div onclick="window.open(', _blank')" class="tool">
+                <div onclick="window.open('//www.framer.com/?via=anh72&gad_source=1&gclid=Cj0KCQjw4cS-BhDGARIsABg4_J1e-Zq-HM9ZKBxl-Xfd031eisQ-tqb41uI0Za4oy7J05ihiZ1pcRAUaAjSTEALw_wcB/')"
+                    class="tool">
                     <img src="images/framer.png" alt="Framer">
                     <div class="tool-text">
                         <h3>Framer</h3>
                         <p>Website Builder</p>
                     </div>
                 </div>
-                <div onclick="window.open(', _blank')" class="tool">
-                    <img src="./images/lemon.jpeg" alt="Lemon">
+                <div onclick="window.open('//www.notion.com/')" class="tool">
+                    <img src="images/Notion.webp" alt="Notion">
                     <div class="tool-text">
-                        <h3>Lemon</h3>
-                        <p>Payment Approval</p>
+                        <h3>Notion</h3>
+                        <p>Productivity Tool</p>
                     </div>
                 </div>
             </div>
@@ -399,8 +405,9 @@
             <h2>watch video</h2>
         </div>
     </div>
+    <div id="contact-us"></div>
     <div class="section5-container section">
-        <div class="section" id="contact-us">
+        <div class="section">
             <div class="section5">
                 <div class="contact">
                     <article></article>
@@ -412,16 +419,20 @@
                         <div class="input1">
                             <p>Feel free to reach out with any questions or job opportunities that match my skills.</p>
                             <label for="fullname">Your Name:</label> <br>
-                            <input type="text" placeholder="Christian Treasure" id="fullname" name="fullname" required> <br> <br>
+                            <input type="text" placeholder="Christian Treasure" id="fullname" name="fullname" required>
+                            <br> <br>
 
                             <label for="email"> your email</label><br>
-                            <input name="email" type="email" placeholder="youremail@gmail.com" id="email" required><br><br>
+                            <input name="email" type="email" placeholder="youremail@gmail.com" id="email"
+                                required><br><br>
 
                             <label for="message">your message</label><br>
-                            <textarea class="message" name="message" id="message" placeholder="input your message here" rows="10" cols="50" maxlength="1000"></textarea>
-                           
+                            <textarea class="message" name="message" id="message" placeholder="input your message here"
+                                rows="10" cols="50" maxlength="1000"></textarea>
+
                             <div class="send">
-                                <button id="sendBtn" onclick="sendMessage()" type="button">Send it my way <i class="fa-regular fa-paper-plane"></i></button>
+                                <button id="sendBtn" onclick="sendMessage()" type="button">Send it my way <i
+                                        class="fa-regular fa-paper-plane"></i></button>
                             </div>
                         </div>
                         <div class="contact-container">
@@ -467,18 +478,8 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fa fa-location-dot"></i>
-                                <span>Owerri Imo state, nigeria 460001, 460222</span>
+                                <span>Port Harcourt - Rivers state, nigeria 500001, 500101</span>
                             </div>
-                        </div>
-                        <div class="social-icons">
-                            <a href="https://github.com/trenzyfx1" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.facebook.com/profile.php?id=61568275677168" target="_blank"><i
-                                    class="fab fa-facebook"></i></a>
-                            <a href="https://wa.link/ytz8gg" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                            <a href="https://www.instagram.com/code_gem1/" target="_blank"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/christian-treasure-b46882336/" target="_blank"><i
-                                    class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -488,13 +489,16 @@
     <div>
         <a href="" id="scrollTopBtn">⬆ Scroll to Top</a>
     </div>
+
     <footer>
-        <div>
-            <p>
-                &copy; Copyright <span id="year"></span> <a href="https://github.com/trenzyfx1" target="_blank">Christian Treasure</a> All Rights Reserved
-            </p>
+        <p>&copy; <span id="year"></span> Copyright <a href="https://github.com/trenzyfx1" target="_blank">Christian Treasure</a> All Rights Reserved </p>
+        <div class="footer-links">
+            <a href="./faq.html">FAQ</a> <span>|</span>
+            <a href="./onboard.html">Onboarding</a> <span>|</span>
+            <a href="./privacy-policy.html">Privacy Policy</a>
         </div>
     </footer>
+
 
     <div class="chatbot-container">
         <div class="bot-intro">Hi, how can I assist?</div>
@@ -512,6 +516,8 @@
         <button class="chat-toggle">💬</button>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./JS Minifier/script.js"></script>
+    <script src="./JS Minifier/bot.js"></script>
 </body>
+
 </html>
