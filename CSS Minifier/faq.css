@@ -26,6 +26,11 @@ header {
     background-color: #3a3939;
 }
 
+.potfolio img {
+    width: 80px;
+    margin-top: 7px;
+}
+
 header h2 {
     font-size: 3.5rem;
     line-height: 0;
@@ -192,4 +197,21 @@ footer .footer-links span {
     .faq-question {
         font-size: 3.5vw;
     }
+}
+
+@media (max-width: 480px) {
+
+    .potfolio img {
+        width: 15vw;
+    }
+
+    .resume .my-resume {
+        height: 12vw;
+    }
+
+    .resume {
+      position: relative;
+      bottom: 10px;
+    }
+
 }

@@ -51,7 +51,10 @@ header {
     justify-content: center;
     width: 15%;
     padding-top: 5px;
-    font-size: 20px;
+}
+
+.potfolio img {
+    width: 80px;
 }
 
 
@@ -1097,14 +1100,14 @@ footer .footer-links span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.5s ease, transform 0.3s ease;
 }
 
 .menu {
     position: fixed;
-    top: 82px;
+    top: 100%;
     right: -65vw;
     width: 50vw;
     height: 20vh;
@@ -1746,6 +1749,7 @@ footer .footer-links span {
 
     .potfolio img {
         width: 80px;
+        margin-left: 20px;
     }
 
 
@@ -2046,7 +2050,6 @@ footer .footer-links span {
         width: 100%;
     }
 
-
     .desktop-header {
         display: none;
     }
@@ -2058,13 +2061,12 @@ footer .footer-links span {
 
 
     .potfolio img {
-        width: 22vw;
-        margin-top: 1.5vw;
+        width: 15vw;
         margin-left: 6vw;
     }
 
     .top-nav {
-        height: 6vw;
+        height: 7vw;
         margin: auto;
         gap: 5vw;
     }
@@ -2081,6 +2083,10 @@ footer .footer-links span {
 
     .mobile-header .menu.active {
         display: flex;
+    }
+
+    .menu-icon {
+        margin-right: 10px;
     }
 
     .section1 {

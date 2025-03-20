@@ -210,11 +210,6 @@ button:hover {
 
 @media (max-width: 357px) {
 
-  /* .dots-container {
-    position: relative;
-    bottom: 10vw;
-  } */
-
   .slide h2 {
     font-size: 6.5vw;
   }
