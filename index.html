@@ -17,7 +17,7 @@
     <title>Christian Treasure | front end developer</title>
 </head>
 
-<body id="index">
+<body>
     <header class="desktop-header">
         <div class="potfolio">
             <a href="#"><img src="./images/logo.png" alt="home"></a>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="write-up">
                     <div class="pbutton">
-                        <h2>crunchies online </h2>
+                        <h2>crunch</h2>
                         <button onclick="window.open('//github.com/trenzyfx1/crunches-online-', '_blank')"
                             class="button2" type="button">
                             <i class="fab fa-github"></i>
@@ -172,7 +172,7 @@
                 </div>
                 <div class="write-up">
                     <div class="pbutton">
-                        <h2>metabnb</h2>
+                        <h2>bnb</h2>
                         <div>
                             <button onclick="window.open('//github.com/trenzyfx1/Metabnb', '_blank')" class="button2"
                                 type="button">
@@ -200,7 +200,7 @@
                 </div>
                 <div class="write-up">
                     <div class="pbutton">
-                        <h2>insurance policy </h2>
+                        <h2>policy</h2>
                         <div>
                             <button onclick="window.open('//github.com/trenzyfx1/insurance', '_blank')" class="button2"
                                 type="button">
@@ -290,9 +290,7 @@
     <div class="section3 section" id="tools">
         <section class="skills-section section">
             <div class="skills-title">
-                <article></article>
                 <h2>TOOLS</h2>
-                <article></article>
             </div>
             <div class="skills-container">
                 <div class="skills-track">
@@ -388,12 +386,7 @@
                 I’m a passionate front-end developer specializing in creating intuitive, responsive,
                 and visually appealing websites using HTML, CSS, JavaScript, and frameworks like React or Vue.js.
                 With a strong eye for design and problem-solving, I deliver seamless digital experiences that align with
-                user
-                needs and client goals. I thrive on turning ideas into functional, user-friendly web applications while
-                ensuring
-                performance and accessibility.
-                Always eager to learn and stay updated with the latest trends, I’m ready to build something amazing with
-                you!
+                user needs and client goals.
             </p>
         </div>
         <div class="video-container">
@@ -418,22 +411,28 @@
                     <div class="input-section">
                         <div class="input1">
                             <p>Feel free to reach out with any questions or job opportunities that match my skills.</p>
-                            <label for="fullname">Your Name:</label> <br>
-                            <input type="text" placeholder="Christian Treasure" id="fullname" name="fullname" required>
-                            <br> <br>
+                            <form action="https://formspree.io/f/xeoaegbr" method="POST">
+                                <label for="fullname">Your Name: <br>
+                                    <input type="text" placeholder="Christian Treasure" id="fullname" name="fullname" required>
+                                </label>
+                                <br> <br>
 
-                            <label for="email"> your email</label><br>
-                            <input name="email" type="email" placeholder="youremail@gmail.com" id="email"
-                                required><br><br>
+                                <label for="email"> your email<br>
+                                    <input name="email" type="email" placeholder="youremail@gmail.com" id="email" required><br><br>
+                                </label>
 
-                            <label for="message">your message</label><br>
-                            <textarea class="message" name="message" id="message" placeholder="input your message here"
-                                rows="10" cols="50" maxlength="1000"></textarea>
+                                <label for="message">your message <br>
+                                    <textarea class="message" name="message" id="message"
+                                        placeholder="input your message here......" rows="10" cols="50" maxlength="1000">
+                                    </textarea>
+                                </label>
 
-                            <div class="send">
-                                <button id="sendBtn" onclick="sendMessage()" type="button">Send it my way <i
-                                        class="fa-regular fa-paper-plane"></i></button>
-                            </div>
+                                <div class="send">
+                                    <button id="sendBtn" type="submit">Send it my way
+                                        <i class="fa-regular fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                         <div class="contact-container">
                             <div class="contact-info">
@@ -447,7 +446,7 @@
                                 </div>
                                 <div class="contact-item">
                                     <i class="fa fa-location-dot"></i>
-                                    <span>Owerri Imo state, nigeria 460001, 460222</span>
+                                    <span>Port Harcourt - Rivers State , nigeria 500001</span>
                                 </div>
                             </div>
                             <div class="social-icons">
@@ -478,7 +477,7 @@
                             </div>
                             <div class="contact-item">
                                 <i class="fa fa-location-dot"></i>
-                                <span>Port Harcourt - Rivers state, nigeria 500001, 500101</span>
+                                <span>Port Harcourt - Nigeria 500001</span>
                             </div>
                         </div>
                     </div>
@@ -491,7 +490,8 @@
     </div>
 
     <footer>
-        <p>&copy; <span id="year"></span> Copyright <a href="https://github.com/trenzyfx1" target="_blank">Christian Treasure</a> All Rights Reserved </p>
+        <p>&copy; <span id="year"></span> Copyright <a href="https://github.com/trenzyfx1" target="_blank">Christian
+                Treasure</a> All Rights Reserved </p>
         <div class="footer-links">
             <a href="./faq.html">FAQ</a> <span>|</span>
             <a href="./onboard.html">Onboarding</a> <span>|</span>

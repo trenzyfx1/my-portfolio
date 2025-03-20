@@ -195,10 +195,6 @@ button:hover {
     font-size: 12px;
   }
 
-  .dots-container {
-    margin-top: 5px;
-  }
-
   .dot {
     height: 8px;
     width: 8px;
@@ -209,4 +205,27 @@ button:hover {
     font-size: 20px;
     padding: 6px 10px;
   }
+}
+
+
+@media (max-width: 357px) {
+
+  /* .dots-container {
+    position: relative;
+    bottom: 10vw;
+  } */
+
+  .slide h2 {
+    font-size: 6.5vw;
+  }
+}
+
+
+@media (max-width: 310px) {
+
+  .dots-container {
+    position: relative;
+    bottom: 10vw;
+  }
+
 }

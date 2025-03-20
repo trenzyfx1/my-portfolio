@@ -80,7 +80,7 @@ header h2 {
 
 .faq-container {
     background: #fff;
-    width: 60%;
+    width: 70%;
     margin: 8pc auto;
     border-radius: 8px;
     padding: 30px;
@@ -110,6 +110,7 @@ header h2 {
     width: 97%;
     padding: 15px;
     background: #e0dfdf;
+    text-transform: lowercase;
     border: none;
     font-size: 18px;
     font-weight: bold;
@@ -129,7 +130,7 @@ header h2 {
     display: none;
     padding: 15px;
     background: #f1f1f1;
-    border-left: 3px solid #ffa500;
+    border-left: 3px solid #25D366;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
 }
@@ -178,5 +179,17 @@ footer .footer-links span {
 @media (max-width: 550px) {
     header h2 {
         display: none;
+    }
+
+    .faq-title {
+        font-size: 6vw;
+    }
+
+    .faq-subtitle {
+        font-size: 3.5vw;
+    }
+
+    .faq-question {
+        font-size: 3.5vw;
     }
 }
