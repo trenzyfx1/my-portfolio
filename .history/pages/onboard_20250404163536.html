@@ -1,0 +1,84 @@
+<!-- DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christian Treasure">
+    <meta name="description" content="Onboarding - Get started with Christian Treasure's services and projects.">
+
+    <title>Onboarding | Christian Treasure</title>
+
+    <link rel="stylesheet" href="../CSS/onboard.css">
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <link rel="stylesheet" href="../CSS/bot.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXS2HRSNWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXS2HRSNWE');
+    </script>
+
+    <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/f34c3a5322528.js" data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
+</head>
+
+<body>
+
+    <div class="carousel-container fade-in">
+        <div class="carousel">
+            <div class="slide active">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Discover my work and skills in a seamless experience.</p>
+                <a href="./index.html">To Home</a>
+            </div>
+
+            <div class="slide">
+                <h2>Contact Me</h2>
+                <p>Email: Rolemodel987gmail.com <br> LinkedIn: /Christian (Code Gem) Treasure</p>
+                <a class="chat" href="https://wa.link/ytz8gg" target="_blank"><i class="fab fa-whatsapp"></i> Chat With Me</a>
+            </div>
+
+            <div class="slide">
+                <h2>Let's Connect</h2>
+                <p>Feel free to reach out for collaborations or opportunities.</p>
+                <a href="./contact.html"> Let’s Connect</a>
+            </div>
+        </div>
+
+        <button id="prevBtn">❮</button>
+        <button id="nextBtn">❯</button>
+
+        <div class="dots-container">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="chatbot-container">
+        <div class="bot-intro">Hi, how can I assist?</div>
+        <div class="chatbot">
+            <div class="chat-header">
+                <span>Trenzy Bot 🤖</span>
+                <button class="close-chat">&times;</button>
+            </div>
+            
+            <div class="chat-body" id="chat-body"></div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+        <button class="chat-toggle">💬</button>
+    </div>
+    <script src="../JS/bot.js"></script>
+    <script src="../JS/onboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+/* DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-container {
+  position: relative;
+  width: 60%;
+  height: 300px;
+  overflow: hidden;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.carousel-container:hover .carousel {
+  animation-play-state: paused;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel a {
+  position: relative;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  background-color: #7f5af0;
+  color: #fff;
+  cursor: pointer;
+  top: 120px;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.carousel .chat {
+  position: relative;
+  top: 100px;
+}
+
+.carousel a:hover {
+  border: #7f5af0 1px solid;
+  background-color: #000;
+  color: red;
+  transform: scale(1.01);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.slide {
+  min-width: 100%;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+.carousel-container button {
+  position: absolute;
+  top: 80%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: black;
+}
+
+@media (max-width: 1024px) {
+  .carousel-container {
+    width: 80%;
+    height: 300px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 90%;
+    height: 300px;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .carousel-container button {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+
+  .carousel-container button#prevBtn {
+    left: 5px;
+  }
+
+  .carousel-container button#nextBtn {
+    right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    width: 95%;
+    height: 300px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+  }
+
+  .carousel-container button {
+    font-size: 20px;
+    padding: 6px 10px;
+  }
+}
+
+
+@media (max-width: 357px) {
+
+  .slide h2 {
+    font-size: 6.5vw;
+  }
+}
+
+
+@media (max-width: 310px) {
+
+  .dots-container {
+    position: relative;
+    bottom: 10vw;
+  }
+
+}

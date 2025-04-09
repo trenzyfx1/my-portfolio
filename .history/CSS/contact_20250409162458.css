@@ -1,0 +1,148 @@
+/* DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER */
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+
+#onboarding {
+    padding: 20px 20px;
+    max-width: 800px;
+    width: 80%;
+    margin: 20px auto;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .head {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    line-height: 1;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #ccc;
+}
+
+progress {
+    background-color: #7f5af0;
+    width: 90%;
+}
+
+ul.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #7f5af0;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    border: #7f5af0 1px solid;
+    background-color: #fff;
+    color: red;
+    /* transform: scale(1.01); */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px;
+    color: #000;
+    border-left: 4px solid #7f5af0;
+    background: #f9f9f9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    height: 100px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+} 
+
+footer a {
+    color: #7f5af0;
+}
+  
+
+@media (max-width: 909px) {
+    .head, .head img {
+        font-size: 3.5vw !important;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+}
+

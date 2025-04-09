@@ -30,6 +30,7 @@
 
     <title>Christian Treasure | Front-End Developer</title>
 
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXS2HRSNWE"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -48,12 +49,12 @@
 <body>
     <header class="desktop-header">
         <div class="potfolio">
-            <a href="./index.html"><img src="./images/logo.png" alt="home"></a>
+            <a href="#"><img src="./images/logo.png" alt="home"></a>
         </div>
 
         <nav>
             <ul class="top-nav">
-                <li class="top-list"><a href="./index.html"><i class="fas fa-home"></i></a>
+                <li class="top-list"><a href="#"><i class="fas fa-home"></i></a>
                     <div class="tooltip">home</div>
                 </li>
                 <li class="top-list"><a href="#projects"><i class="fa fa-file"></i></a>
@@ -119,39 +120,46 @@
 
     <section class="section1 section">
         <div class="me">
-            <img src="./images/me.jpg" alt="me">
+            <img src="./images/orangeme2.jpg" alt="me">
+            <!-- <h2 class="h2">Christian Treasure</h2>
+            <p class="p">
+                a web developer who is about <br>
+                to take the industry by storm.
+            </p>
+
+            <div class="my-i">
+                <a href="https://github.com/trenzyfx1" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61568275677168" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://wa.link/ytz8gg" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/code_gem1/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/christian-treasure-b46882336/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div> -->
         </div>
 
         <div class="me-2 text">
-            <div class="intro-container">
-                <div class="greeting">Hey There, <span class="wave">👋</span></div>
-                <div class="name">I'm Christian Treasure</div>
-                <h1 class="title">A <span id="type-effect"></span><span class="caret">|</span></h1>
-                <div class="description">
-                    <span class="highlight">Passionate</span> About Creating Intuitive And Engaging<br>
-                    User Experiences. <span class="highlight">Specialize</span> In Transforming Ideas<br>
-                    Into Beautifully Crafted Products.
+            <div>
+
+            </div>
+           
+
+            <div class="experience section">
+                <div><span>+2</span><br>
+                    years of <br>
+                    experience
+                </div>
+                <div><span>+5 </span><br>
+                    projects <br>
+                completed
+                </div>
+                <div><span>+10</span> <br>
+                    worldwide <br>
+                    clients
                 </div>
             </div>
         </div>
     </section>
-
-    <div>
-        <div class="experience section">
-            <div><span>+2</span><br>
-                years of <br>
-                experience
-            </div>
-            <div><span>+5 </span><br>
-                projects <br>
-                completed
-            </div>
-            <div><span>+10</span> <br>
-                worldwide <br>
-                clients
-            </div>
-        </div>
-    </div>
 
     <div class="section2" id="projects">
         <h2 class="recent section">recent <span>projects</span></h2>
@@ -429,63 +437,90 @@
         </div>
     </div>
     <div id="contact-us"></div>
-    <div class="section5 section">
-
-        <div class="section5-head">
-            <h2>Contact Me</h2>
-        </div>
-
-        <div class="section5-body">
-            <form class="contact-form">
-                <p>If you have any questions or want to reach out, feel free to contact me.</p>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-
-            <div class="contact-section">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <strong>Name:</strong>
-                        <span>Christian Treasure</span>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Email:</strong>
-                        <a href="mailto:rolemodel987@gmail.com">rolemodel987@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Phone:</strong>
-                        <a href="tel:+2347047889687">+234 704 788 9687</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Location:</strong>
-                        <a href="https://www.google.com/maps?q=Port+Harcourt,+Nigeria" target="_blank">Port Harcourt - Rivers State, Nigeria 500001</a>
-                    </div>
+    <div class="section5-container section">
+        <div class="section">
+            <div class="section5">
+                <div class="contact">
+                    <article></article>
+                    <h2><img class="paper" src="./images/paper.png" alt="">contact me</h2>
+                    <article></article>
                 </div>
 
-                <div class="social-media">
-                    <h3>Follow Me</h3>
-                    <div class="social-icons">
-                        <a href="https://github.com/trenzyfx1" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=61568275677168" target="_blank"><i
-                                class="fab fa-facebook"></i></a>
-                        <a href="https://wa.link/ytz8gg" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/code_gem1/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/christian-treasure-b46882336/" target="_blank"><i
-                                class="fab fa-linkedin"></i></a>
+                <div class="input2">
+                    <div class="input-section">
+                        <div class="input1">
+                            <p>Feel free to reach out with any questions or job opportunities that match my skills.</p>
+                            <form id="contact" action="https://formspree.io/f/xeoaegbr" method="POST">
+                                <section id="contact">
+                                    <h2>Contact Me</h2>
+                                    <form class="contact-form">
+                                      <input type="text" placeholder="Your Name" required>
+                                      <input type="email" placeholder="Your Email" required>
+                                      <textarea placeholder="Your Message" required></textarea>
+                                      <button type="submit">Send Message</button>
+                                    </form>
+                                  </section>                                  
+                            </form>
+                        </div>
+
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fa fa-at"></i>
+                                    <span>rolemodel987@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa fa-phone"></i>
+                                    <span>+2347047889687</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fa fa-location-dot"></i>
+                                    <span>Port Harcourt - Rivers State , nigeria 500001</span>
+                                </div>
+                            </div>
+
+                            <div class="social-icons">
+                                <a href="https://github.com/trenzyfx1" target="_blank"><i class="fab fa-github"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61568275677168" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://wa.link/ytz8gg" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/code_gem1/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/christian-treasure-b46882336/" target="_blank"><i
+                                        class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="vertical-text">contact</div>
+                            <section></section>
+                        </div>
+                    </div>
+                    <div class="contact-container2">
+                        <div>
+                            <div class="contact-item">
+                                <i class="fa fa-at"></i>
+                                <span>rolemodel987@gmail.com</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fa fa-phone"></i>
+                                <span>+2347047889687</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fa fa-location-dot"></i>
+                                <span>Port Harcourt - Nigeria 500001</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
-    </div>
     </div>
 
     <div>
-        <a href="./index.html" id="scrollTopBtn">↑ Scroll to Top</a>
+        <a href="" id="scrollTopBtn">⬆ Scroll to Top</a>
     </div>
 
     <footer>
