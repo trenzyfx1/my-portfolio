@@ -27,11 +27,11 @@ body {
     z-index: 1;
 }
 
-/* .section1 {
+.section1 {
     position: relative;
     z-index: 2;
     color: white;
-} */
+}
 
 
 nav,
@@ -213,7 +213,6 @@ i {
     margin-top: 10pc;
     align-items: center;
     flex-wrap: wrap;
-    /* background-color: #fff; */
 }
 
 .me img {
@@ -222,6 +221,7 @@ i {
     margin-left: 4px;
     max-width: 100%;
     width: 300px;
+    filter: blur(7px);
     height: 200vh;
     border-radius: 50%;
     height: auto;
@@ -229,9 +229,8 @@ i {
 }
 
 .me img:hover {
-    filter: grayscale(0);
-    /* transform: scale(1.1); */
-    /* transition: all 1.5s ease; */
+    filter: blur(0);
+    
 }
 
 

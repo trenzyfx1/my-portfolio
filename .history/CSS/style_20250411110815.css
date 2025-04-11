@@ -210,10 +210,10 @@ i {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 10pc;
+    /* margin-top: 10pc; */
     align-items: center;
     flex-wrap: wrap;
-    /* background-color: #fff; */
+    background-color: #fff;
 }
 
 .me img {
