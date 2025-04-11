@@ -642,6 +642,7 @@ i {
   }
   
   .stat p {
+    line-height: 0;
     color: #ccc;
     text-transform: uppercase;
     font-size: 0.9rem;

@@ -637,11 +637,12 @@ i {
   
   .stat h2 {
     font-size: 3rem;
-    line-height: 0;
+    /* line-height: 0; */
     color: white;
   }
   
   .stat p {
+    line-height: 0;
     color: #ccc;
     text-transform: uppercase;
     font-size: 0.9rem;

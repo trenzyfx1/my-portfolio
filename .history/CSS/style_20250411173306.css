@@ -636,6 +636,7 @@ i {
   }
   
   .stat h2 {
+    /* margin-top: 30px; */
     font-size: 3rem;
     line-height: 0;
     color: white;
