@@ -342,6 +342,7 @@ i {
 .project-container {
     max-width: 1300px;
     margin: auto;
+    padding: 0 1rem;
 }
 
 .projects-section {
