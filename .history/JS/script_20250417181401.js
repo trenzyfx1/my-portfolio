@@ -118,5 +118,6 @@ videoBox.addEventListener('mouseleave', () => {
     video.currentTime = 0;
 });
 
+
 let year = new Date().getFullYear().toString();
 document.getElementById("year").innerHTML = year;
