@@ -72,6 +72,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+<script>
+  const section = document.getElementById('project-section');
+  const cards = document.querySelectorAll('.project-card');
+
+  function isInView(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight &&
+      rect.bottom >= 0
+    );
+  }
+
+  function handleScroll() {
+    if (isInView(section)) {
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('show');
+        }, index * 300);
+      });
+
+      // Only run once
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+</script>
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll('.experience-card');

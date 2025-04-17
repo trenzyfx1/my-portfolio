@@ -118,6 +118,10 @@ videoBox.addEventListener('mouseleave', () => {
     video.currentTime = 0;
 });
 
+if ('ontouchstart' in window || navigator.maxTouchPoints) {
+    video.play();
+}
+
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
