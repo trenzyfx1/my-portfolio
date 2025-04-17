@@ -488,42 +488,28 @@
                         <a href="mailto:rolemodel987@gmail.com">hello@christiantreasure.com</a>
                     </div>
                     <div class="contact-item">
-                        <strong>Chat Me:</strong>
-                        <a href="https://wa.link/ytz8gg">whatsapp</a>
+                        <strong>Phone:</strong>
+                        <a href="tel:+2347047889687">+234 704 788 9687</a>
                     </div>
                     <div class="contact-item">
-                        <strong>Location:</strong>
+                        <!-- HTML -->
+                        <button onclick="toggleMap()"
+                            style="cursor: pointer; background: none; border: none; color: #0066cc;">
+                            📍 Click to View Location (Port Harcourt, Nigeria)
+                        </button>
 
-                        <div>
-                            📍 <button onclick="showMap()"
-                                style="cursor: pointer; background: none; border: none; color: #0066cc; padding: 0;"> click to view location 
-                                (Port Harcourt, Nigeria)
-                            </button>
-                        </div>
-
-                        <div id="mapModal"
-                            style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
-                            <div
-                                style="background: white; padding: 20px; border-radius: 8px; width: 80%; max-width: 600px;">
-                                <iframe width="100%" height="400" frameborder="0"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.837217709835!2d6.9982764!3d4.815556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce3b0e5a0f05%3A0x6f6b7b1b9c9c9c9c!2sPort%20Harcourt%2C%20Nigeria!5e0!3m2!1sen!2s!4v1620000000000"
-                                    allowfullscreen>
-                                </iframe>
-                                <button onclick="hideMap()"
-                                    style="display: block; margin: 10px auto; padding: 5px 10px;">Close Map</button>
-                            </div>
+                        <div id="mapContainer" style="display: none; margin-top: 10px;">
+                            <iframe width="100%" height="300" frameborder="0" scrolling="no"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.837217709835!2d6.9982764!3d4.815556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce3b0e5a0f05%3A0x6f6b7b1b9c9c9c9c!2sPort%20Harcourt%2C%20Nigeria!5e0!3m2!1sen!2s!4v1620000000000"
+                                allowfullscreen>
+                            </iframe>
                         </div>
 
                         <script>
-                            function showMap() {
-                                document.getElementById("mapModal").style.display = "flex";
+                            function toggleMap() {
+                                const map = document.getElementById("mapContainer");
+                                map.style.display = map.style.display === "none" ? "block" : "none";
                             }
-                            function hideMap() {
-                                document.getElementById("mapModal").style.display = "none";
-                            }
-                            document.getElementById("mapModal").addEventListener("click", function (e) {
-                                if (e.target === this) hideMap();
-                            });
                         </script>
                     </div>
                 </div>
