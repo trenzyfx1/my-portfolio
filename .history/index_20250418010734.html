@@ -511,7 +511,7 @@
                             const mapContainer = document.getElementById("mapContainer");
 
                             locationBtn.addEventListener("click", (e) => {
-                                e.stopPropagation();
+                                e.stopPropagation(); // prevent click from bubbling up
                                 mapContainer.style.display = "block";
                             });
 

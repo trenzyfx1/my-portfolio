@@ -1397,10 +1397,8 @@ footer .footer-links span {
     }
 
     .me img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        width:;
+        object-fit: cover;
+        
     }
 
     .section2 {
