@@ -1,7 +1,5 @@
 /* DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Manrope:wght@400;600&family=Urbanist:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap');
-
 html,
 body {
     width: 100%;
@@ -10,7 +8,7 @@ body {
     overflow-x: hidden;
     background-color: #000;
     color: #000;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: sans-serif;
 }
 
 header {
@@ -137,7 +135,7 @@ header h2 {
     display: none;
     padding: 15px;
     background: #f1f1f1;
-    border-left: 3px solid #7f5af0;
+    border-left: 3px solid #;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
 }
@@ -163,7 +161,7 @@ footer {
 }
 
 footer a {
-    color: #7f5af0;
+    color: #2ecc71;
     text-decoration: none;
     margin: 0 10px;
     font-weight: bold;
