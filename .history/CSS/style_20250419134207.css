@@ -212,30 +212,16 @@ i {
     flex-wrap: wrap;
 }
 
-.me {
-    overflow: hidden;
-    border-radius: 50%;
-}
-
 .me img {
-    border-radius: 50%;
-    width: 350px;
-    height: auto;
-    max-width: 100%;
-    display: block;
+    border-radius: 12px;
     margin-left: 4px;
-    transition: transform 1.5s ease;
-    will-change: transform;
+    max-width: 100%;
+    width: 350px;
+    height: 250vh;
+    border-radius: 50%;
+    height: auto;
+    display: block;
 }
-
-.scroll-zoom img {
-    transform: scale(1.2);
-}
-
-.scroll-zoom.visible img {
-    transform: scale(1);
-}
-
 
 .intro-container {
     max-width: 800px;
@@ -1363,17 +1349,11 @@ footer .footer-links span {
 
 @media (max-width: 560px) {
 
-    .me {
-        height: auto;
-        width: 300px;
-        display: block;
-        object-fit: cover;
-    }
-    
     .me img {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
     }
@@ -1396,7 +1376,7 @@ footer .footer-links span {
 
 
     .potfolio img {
-        width: 50px;
+        width: 15vw;
         margin-left: 6vw;
     }
 
@@ -1432,6 +1412,7 @@ footer .footer-links span {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
         margin: 0 auto;

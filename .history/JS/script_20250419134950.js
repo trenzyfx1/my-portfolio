@@ -14,17 +14,18 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-const scrollElements = document.querySelectorAll(".scroll-zoom");
+  window.addEventListener("scroll", () => {
+    const img = document.querySelector(".head-img");
+    if (!img) return;
 
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
+    // Adjust this value to control how fast it zooms out
+    const scrollY = window.scrollY;
+    const scale = Math.max(0.5, 1 - scrollY / 800); 
+
+    img.style.transform = `scale(${scale})`;
   });
+</script>
 
-  scrollElements.forEach((el) => scrollObserver.observe(el));
 
 const typeEffect = document.getElementById("type-effect");
 const titles = ["Frontend Developer", "Programmer", "Tech Enthusiast"];

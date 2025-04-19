@@ -1,5 +1,7 @@
 // DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER
 
+
+
 const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver(entries => {

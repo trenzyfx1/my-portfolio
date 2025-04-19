@@ -1432,6 +1432,7 @@ footer .footer-links span {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
         margin: 0 auto;

@@ -14,17 +14,7 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-const scrollElements = document.querySelectorAll(".scroll-zoom");
 
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  });
-
-  scrollElements.forEach((el) => scrollObserver.observe(el));
 
 const typeEffect = document.getElementById("type-effect");
 const titles = ["Frontend Developer", "Programmer", "Tech Enthusiast"];

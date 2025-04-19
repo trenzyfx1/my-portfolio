@@ -65,7 +65,36 @@
 </head>
 
 <body>
-    <header class="desktop-header">
+
+    <header class="navbar">
+        <div class="logo-nick">
+            <img src="./images/l" alt="Logo">
+            <span class="nickname">Trenzy</span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About Us</a>
+
+            <div class="dropdown">
+                <button class="drop-btn">Pages <span>▼</span></button>
+                <div class="dropdown-content">
+                    <a href="#projects">Projects</a>
+                    <a href="#tools">Tools</a>
+                    <a href="#experience">Experience</a>
+                    <a href="mailto:youremail@example.com">Email</a>
+                </div>
+            </div>
+
+            <a href="#contact" class="contact-btn">Contact Us</a>
+        </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- <header class="desktop-header">
         <div class="potfolio">
             <a href="/"><img src="./images/logo.png" alt="home"></a>
         </div>
@@ -134,7 +163,7 @@
             <button onclick="location.href='#about-us'" class="about-us" type="button">About me</button>
             <button onclick="location.href='#contact-us'" class="contact-us" type="button">Contact me</button>
         </div>
-    </header>
+    </header> -->
 
     <section class="section1 section">
         <div class="me scroll-zoom">
@@ -544,8 +573,26 @@
         </div>
 
     </div>
+    </div>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">
+                &copy; <span id="year"></span> — <a href="https://github.com/trenzyfx1" class="name">Christian
+                    Treasure</a> — All rights reserved.
+            </p>
+
+            <ul class="footer-links">
+                <li><a href="./pages/faq.html">FAQ</a></li>
+                <li><a href="./pages/onboard.html">Onboarding</a></li>
+                <li><a href="./pages/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="mailto:rolemodel987@gmail.com">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <!-- <footer>
         <p>&copy; <span id="year"></span> Copyright <a href="https://github.com/trenzyfx1" target="_blank">Christian
                 Treasure</a> All Rights Reserved </p>
 
@@ -554,7 +601,7 @@
             <a href="./pages/onboard.html">Onboarding</a> <span>|</span>
             <a href="./pages/privacy-policy.html">Privacy Policy</a>
         </div>
-    </footer>
+    </footer> -->
 
 
     <div class="chatbot-container">

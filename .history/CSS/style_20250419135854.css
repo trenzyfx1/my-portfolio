@@ -214,10 +214,9 @@ i {
 
 .me {
     overflow: hidden;
-    border-radius: 50%;
 }
 
-.me img {
+.head-img {
     border-radius: 50%;
     width: 350px;
     height: auto;
@@ -230,11 +229,11 @@ i {
 
 .scroll-zoom img {
     transform: scale(1.2);
-}
-
-.scroll-zoom.visible img {
+  }
+  
+  .scroll-zoom.visible img {
     transform: scale(1);
-}
+  }
 
 
 .intro-container {
@@ -1363,17 +1362,11 @@ footer .footer-links span {
 
 @media (max-width: 560px) {
 
-    .me {
-        height: auto;
-        width: 300px;
-        display: block;
-        object-fit: cover;
-    }
-    
     .me img {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
     }
@@ -1432,6 +1425,7 @@ footer .footer-links span {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
         margin: 0 auto;

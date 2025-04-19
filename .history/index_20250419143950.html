@@ -70,7 +70,17 @@
             <a href="/"><img src="./images/logo.png" alt="home"></a>
         </div>
 
-        <nav>
+        <nav class="navbar">
+            <ul class="nav-links">
+              <li><a href="/" class="nav-link active">Projects</a></li>
+              <li><a href="#projects" class="nav-link active">Projects</a></li>
+              <li><a href="#experience" class="nav-link">experience</a></li>
+              <li><a href="#work" class="nav-link">Work</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+          </nav>
+
+        <!-- <nav>
             <ul class="top-nav">
                 <li class="top-list"><a href="/"><i class="fas fa-home"></i></a>
                     <div class="tooltip">home</div>
@@ -90,7 +100,7 @@
                     <div class="tooltip">email</div>
                 </li>
             </ul>
-        </nav>
+        </nav> -->
 
         <div class="top-button">
             <button onclick="location.href='#about-us'" class="about-us" type="button">About me</button>
@@ -421,12 +431,9 @@
                 using modern technologies like <span class="highlight2">HTML, CSS, JavaScript</span>, and frameworks
                 like React<br>
                 or Vue.js. <br> <br>
-                With an eye for design and a knack for <span class="highlight2">solving problems</span>, I aim to
-                deliver seamless digital<br>
-                experiences that meet user needs and align with <span class="highlight2">client goals</span>. Whether
-                it's crafting engaging <br>
-                landing pages or developing interactive web applications. lets build <br> <span
-                    class="highlight2">something amazing together!</span>
+                With an eye for design and a knack for <span class="highlight2">solving problems</span>, I aim to deliver seamless digital<br>
+                experiences that meet user needs and align with <span class="highlight2">client goals</span>. Whether it's crafting engaging <br>
+                landing pages or developing interactive web applications. lets build <br> <span class="highlight2">something amazing together!</span>
             </p>
 
             <p class="p2">
@@ -453,7 +460,7 @@
     <div class="section5 section">
 
         <div class="section5-head">
-            <h2>get in touch</h2>
+            <h2>Contact Me</h2>
         </div>
 
         <div class="section5-body">
@@ -479,7 +486,7 @@
             <div class="contact-section">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <strong>me:</strong>
+                        <strong>Name:</strong>
                         <span>Christian Treasure</span>
                     </div>
                     <div class="contact-item">
@@ -487,7 +494,7 @@
                         <a href="mailto:rolemodel987@gmail.com">hello@christiantreasure.com</a>
                     </div>
                     <div class="contact-item">
-                        <strong>Chat with Me:</strong>
+                        <strong>Chat Me:</strong>
                         <a href="https://wa.link/ytz8gg">whatsapp</a>
                     </div>
                     <div class="contact-item">
@@ -544,8 +551,25 @@
         </div>
 
     </div>
+    </div>
 
-    <footer>
+    <footer class="footer">
+        <div class="footer-container">
+          <p class="copyright">
+            &copy; <span id="year"></span> —  <a href="https://github.com/trenzyfx1" class="name">Christian Treasure</a> — All rights reserved.
+          </p>
+      
+          <ul class="footer-links">
+            <li><a href="./pages/faq.html">FAQ</a></li>
+            <li><a href="./pages/onboard.html">Onboarding</a></li>
+            <li><a href="./pages/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="mailto:rolemodel987@gmail.com">Contact</a></li>
+          </ul>
+        </div>
+      </footer>
+      
+
+    <!-- <footer>
         <p>&copy; <span id="year"></span> Copyright <a href="https://github.com/trenzyfx1" target="_blank">Christian
                 Treasure</a> All Rights Reserved </p>
 
@@ -554,7 +578,7 @@
             <a href="./pages/onboard.html">Onboarding</a> <span>|</span>
             <a href="./pages/privacy-policy.html">Privacy Policy</a>
         </div>
-    </footer>
+    </footer> -->
 
 
     <div class="chatbot-container">

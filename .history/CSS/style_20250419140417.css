@@ -1366,14 +1366,14 @@ footer .footer-links span {
     .me {
         height: auto;
         width: 300px;
-        display: block;
-        object-fit: cover;
+
     }
-    
+
     .me img {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
     }
@@ -1432,6 +1432,7 @@ footer .footer-links span {
         max-width: 100%;
         height: auto;
         width: 300px;
+        padding: 0 30px;
         display: block;
         object-fit: cover;
         margin: 0 auto;

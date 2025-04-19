@@ -1,18 +1,46 @@
 // DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER
 
-const sections = document.querySelectorAll(".section");
+// const sections = document.querySelectorAll(".section");
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//             entry.target.classList.add("show");
+//         }
+//     });
+// }, { threshold: 0.3 });
+
+// sections.forEach(section => {
+//     observer.observe(section);
+// });
+
+  function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+  }
+
+  // Scroll active underline
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    sections.forEach((sec) => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
+
+      if (top >= offset && top < offset + height) {
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          document
+            .querySelector(`.nav-link[href="#${id}"]`)
+            ?.classList.add('active');
+        });
+      }
     });
-}, { threshold: 0.3 });
+  });
+</script>
 
-sections.forEach(section => {
-    observer.observe(section);
-});
 
 const scrollElements = document.querySelectorAll(".scroll-zoom");
 

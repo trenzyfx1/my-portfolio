@@ -1,5 +1,44 @@
 // DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER
 
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    // Function to update active link
+    function updateActiveLink() {
+        let index = sections.length;
+
+        // Check which section is in view
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
+
+        // Remove active class from all links
+        navLinks.forEach((link) => link.classList.remove('active'));
+
+        // Add active class to corresponding link
+        navLinks[index].classList.add('active');
+    }
+
+    // Initial call
+    updateActiveLink();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', updateActiveLink);
+
+    // Click event for smooth scrolling
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+
 const sections = document.querySelectorAll(".section");
 
 const observer = new IntersectionObserver(entries => {
@@ -16,15 +55,15 @@ sections.forEach(section => {
 
 const scrollElements = document.querySelectorAll(".scroll-zoom");
 
-  const scrollObserver = new IntersectionObserver((entries) => {
+const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
     });
-  });
+});
 
-  scrollElements.forEach((el) => scrollObserver.observe(el));
+scrollElements.forEach((el) => scrollObserver.observe(el));
 
 const typeEffect = document.getElementById("type-effect");
 const titles = ["Frontend Developer", "Programmer", "Tech Enthusiast"];
