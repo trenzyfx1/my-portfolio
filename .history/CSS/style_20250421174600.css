@@ -351,7 +351,6 @@ i {
     display: flex;
     margin-top: 30px;
     gap: 20px;
-    flex-wrap: wrap;
 } 
 
 .resume a {
@@ -362,11 +361,7 @@ i {
     color: #fff;
     text-decoration: none;
     text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 47px;
-    width: 150px;
+    padding: 12px 44px;
     cursor: pointer;
     transition: background-color 0.5s ease, transform 0.3s ease;
 
@@ -434,6 +429,21 @@ i {
     font-size: 14px;
     color: #ccc;
   }
+
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
 
 .project-container {
     max-width: 1300px;
@@ -1215,26 +1225,6 @@ footer .footer-links span {
     }
 }
 
-@media (max-width: 890px) {
-
-    .section1 {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .intro-container {
-        text-align: center;
-    }
-
-    .resume, .social-icons1 {
-        display: flex;
-        justify-content: center;
-    } 
-
-}
-
 @media (max-width: 836px) {
 
     body {
@@ -1257,7 +1247,7 @@ footer .footer-links span {
         flex-direction: column;
         background: #111;
         position: absolute;
-        top: 79%;
+        top: 80%;
         right: 0;
         width: 250px;
         padding: 20px;
@@ -1269,7 +1259,7 @@ footer .footer-links span {
     }
 
     .dropdown-menu {
-        top: 5.4pc;
+        top: 5.5pc;
     }
 
     .hamburger {
@@ -1377,11 +1367,7 @@ footer .footer-links span {
 
     
     .section1 {
-        margin-top: 5pc;
-    }
-
-    .stats-container {
-        display: none;
+        margin-top: 7pc;
     }
 
     .me img {

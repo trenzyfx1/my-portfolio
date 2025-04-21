@@ -351,7 +351,6 @@ i {
     display: flex;
     margin-top: 30px;
     gap: 20px;
-    flex-wrap: wrap;
 } 
 
 .resume a {
@@ -362,11 +361,7 @@ i {
     color: #fff;
     text-decoration: none;
     text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 47px;
-    width: 150px;
+    padding: 12px 44px;
     cursor: pointer;
     transition: background-color 0.5s ease, transform 0.3s ease;
 
@@ -1378,6 +1373,10 @@ footer .footer-links span {
     
     .section1 {
         margin-top: 5pc;
+    }
+
+    .resume a {
+        font-size: 5vw;
     }
 
     .stats-container {

@@ -211,7 +211,7 @@ i {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    margin-top: 7pc;
+    margin-top: 5pc;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -260,6 +260,13 @@ i {
     max-width: 800px;
     padding: 2rem;
     text-align: left;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #a7a9be;
 }
 
 @keyframes wave {
@@ -351,7 +358,6 @@ i {
     display: flex;
     margin-top: 30px;
     gap: 20px;
-    flex-wrap: wrap;
 } 
 
 .resume a {
@@ -362,11 +368,7 @@ i {
     color: #fff;
     text-decoration: none;
     text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 47px;
-    width: 150px;
+    padding: 12px 44px;
     cursor: pointer;
     transition: background-color 0.5s ease, transform 0.3s ease;
 
@@ -403,7 +405,7 @@ i {
 }
 
 .stats-container {
-    margin-top: 30px;
+    margin-top: 4;
     display: flex;
     background-color: #1e1e1e;
     color: white;
@@ -414,8 +416,8 @@ i {
   }
 
   .stat {
-    text-align: left;
-    padding: 0 10px;
+    text-align: center;
+    padding: 0 15px;
     border-right: 1px solid #444;
   }
 
@@ -434,6 +436,21 @@ i {
     font-size: 14px;
     color: #ccc;
   }
+
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 3rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
 
 .project-container {
     max-width: 1300px;
@@ -1215,26 +1232,6 @@ footer .footer-links span {
     }
 }
 
-@media (max-width: 890px) {
-
-    .section1 {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .intro-container {
-        text-align: center;
-    }
-
-    .resume, .social-icons1 {
-        display: flex;
-        justify-content: center;
-    } 
-
-}
-
 @media (max-width: 836px) {
 
     body {
@@ -1257,7 +1254,7 @@ footer .footer-links span {
         flex-direction: column;
         background: #111;
         position: absolute;
-        top: 79%;
+        top: 80%;
         right: 0;
         width: 250px;
         padding: 20px;
@@ -1269,7 +1266,7 @@ footer .footer-links span {
     }
 
     .dropdown-menu {
-        top: 5.4pc;
+        top: 5.5pc;
     }
 
     .hamburger {
@@ -1377,11 +1374,7 @@ footer .footer-links span {
 
     
     .section1 {
-        margin-top: 5pc;
-    }
-
-    .stats-container {
-        display: none;
+        margin-top: 7pc;
     }
 
     .me img {
