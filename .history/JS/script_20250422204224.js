@@ -161,7 +161,7 @@ document.querySelectorAll('a').forEach(link => {
       if (isExternal) {
         const confirmLeave = confirm("You are about to leave this site. Are you sure?");
         if (!confirmLeave) {
-          e.preventDefault();
+          e.preventDefault(); // Cancel navigation
         }
       }
     });

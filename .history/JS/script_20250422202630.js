@@ -127,44 +127,24 @@ if (track) {
     });
 }
 
-const locationBtn = document.getElementById("locationBtn");
-const mapContainer = document.getElementById("mapContainer");
-
-locationBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    mapContainer.style.display = mapContainer.style.display === "none" ? "block" : "none";
-});
-
-document.addEventListener("click", function (e) {
-    const isClickInsideMap = mapContainer.contains(e.target);
-    const isClickOnButton = e.target === locationBtn || locationBtn.contains(e.target);
-    if (!isClickInsideMap && !isClickOnButton) {
-        mapContainer.style.display = "none";
-    }
-});
-
 let year = new Date().getFullYear().toString();
 document.getElementById("year").innerHTML = year;
 
-document.querySelector(".back-to-top").addEventListener("click", function(e) {
-    e.preventDefault();
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
+// document.querySelector(".back-to-top").addEventListener("click", function(e) {
+//     e.preventDefault();
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth"
+//     });
+// });
 
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const isExternal = link.hostname !== window.location.hostname;
+// window.addEventListener('beforeunload', function (e) {
+//     const isExternalLink = !window.location.hostname.includes('https://christian-treasure.vercel.app/');
   
-      if (isExternal) {
-        const confirmLeave = confirm("You are about to leave this site. Are you sure?");
-        if (!confirmLeave) {
-          e.preventDefault();
-        }
-      }
-    });
-  });
-  
+//     if (isExternalLink) {
+//       const message = "You are about to leave this site. Are you sure you want to leave?";
+//       e.returnValue = message;
+//       return message;
+//     }
+//   });
   

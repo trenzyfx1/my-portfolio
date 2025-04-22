@@ -154,17 +154,13 @@ document.querySelector(".back-to-top").addEventListener("click", function(e) {
     });
 });
 
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      const isExternal = link.hostname !== window.location.hostname;
+window.addEventListener('beforeunload', function (e) {
+    const isExternalLink = !window.location.hostname.includes('https://christian-treasure.vercel.app/');
   
-      if (isExternal) {
-        const confirmLeave = confirm("You are about to leave this site. Are you sure?");
-        if (!confirmLeave) {
-          e.preventDefault();
-        }
-      }
-    });
+    if (isExternalLink) {
+      const message = "You are about to leave this site. Are you sure you want to leave?";
+      e.returnValue = message;
+      return message;
+    }
   });
-  
   
