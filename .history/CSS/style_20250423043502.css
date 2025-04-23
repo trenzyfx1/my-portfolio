@@ -297,9 +297,7 @@ i {
     }
 }
 
-.greeting {
-    font-size: 1.5rem;
-}
+gr
 
 
 .wave {
@@ -997,7 +995,7 @@ i {
     font-size: 16px;
 }
 
-.contact-form input,
+.contact-formF input,
 .contact-form textarea {
     width: 92%;
     padding: 1rem;
@@ -1259,6 +1257,18 @@ i {
     max-width: 1200px;
     margin: 2rem auto 0;
     padding: 1rem 20px 0;
+}
+
+.back-to-top {
+    color: #8c52ff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
 }
 
 
