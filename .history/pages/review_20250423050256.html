@@ -6,10 +6,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Christian Treasure (Trenzy)">
-    <meta name="description"
-        content="Check out what clients are saying about Trenzy Tech. Real reviews from worldwide clients praising clean code, responsive design, and top-tier delivery.">
-    <meta name="keywords"
-        content="Trenzy Tech reviews, client testimonials, frontend developer feedback, web dev reviews, Trenzy portfolio">
+    <meta name="description" content="Check out what clients are saying about Trenzy Tech. Real reviews from worldwide clients praising clean code, responsive design, and top-tier delivery.">
+    <meta name="keywords" content="Trenzy Tech reviews, client testimonials, frontend developer feedback, web dev reviews, Trenzy portfolio">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -229,145 +227,7 @@
     </div>
 
     <script>
-        // Intersection Observer for sections
-        const sections = document.querySelectorAll(".section");
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("show");
-                }
-            });
-        }, { threshold: 0.3 });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Reviews data and elements
-        let reviews = JSON.parse(localStorage.getItem('websiteReviews')) || [
-            {
-                rating: 5,
-                feedback: "Silas completely transformed our website. His attention to detail is incredible!",
-                name: "Sarah Johnson",
-                date: "April 20, 2025"
-            },
-            {
-                rating: 4,
-                feedback: "Great communication and fast delivery. Would definitely work with him again.",
-                name: "Michael Chen",
-                date: "April 15, 2025"
-            },
-            {
-                rating: 5,
-                feedback: "Exceptional service! Delivered beyond our expectations.",
-                name: "Emma Williams",
-                date: "April 10, 2025"
-            }
-        ];
-
-        const reviewsContainer = document.getElementById('reviewsContainer');
-        const seeMoreBtn = document.getElementById('seeMoreBtn');
-        const reviewForm = document.getElementById('reviewForm');
-        const stars = document.querySelectorAll('#star-rating span');
-        const ratingInput = document.getElementById('rating-value');
-        const popupOverlay = document.getElementById('popupOverlay');
-        const successPopup = document.getElementById('successPopup');
-
-        // Initialize stars
-        stars.forEach((star, index) => {
-            star.addEventListener('click', function () {
-                const value = this.getAttribute('data-value');
-                ratingInput.value = value;
-                stars.forEach((s, i) => s.classList.toggle('active', i < value));
-            });
-            star.classList.toggle('active', index < 5);
-        });
-
-        // Form submission
-        reviewForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            const formData = new FormData(this);
-            formData.append('_subject', 'New Review from Portfolio');
-            formData.append('date', new Date().toISOString());
-
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-                .then(response => {
-                    if (response.ok) {
-                        const newReview = {
-                            rating: parseInt(ratingInput.value),
-                            feedback: this.elements.feedback.value,
-                            name: this.elements.name.value || "Anonymous",
-                            date: new Date().toLocaleDateString('en-US', {
-                                year: 'numeric',
-                                month: 'long',
-                                day: 'numeric'
-                            })
-                        };
-
-                        reviews.unshift(newReview);
-                        localStorage.setItem('websiteReviews', JSON.stringify(reviews));
-                        renderReviews();
-                        showPopup();
-                        this.reset();
-                        resetStars();
-                    } else {
-                        alert("Error submitting review. Please try again.");
-                    }
-                })
-                .catch(error => {
-                    alert("Network error. Please check your connection.");
-                });
-        });
-
-        // See more/less toggle
-        let showAll = false;
-        seeMoreBtn.addEventListener('click', function () {
-            showAll = !showAll;
-            document.querySelectorAll('.review').forEach(review => {
-                review.classList.toggle('expanded', showAll);
-            });
-            this.textContent = showAll ? 'Show Less' : 'See More Reviews';
-        });
-
-        // Helper functions
-        function renderReviews() {
-            reviewsContainer.innerHTML = reviews.map((review, index) => `
-        <div class="review ${index < 3 ? 'expanded' : ''}">
-            <div class="rating">${'★'.repeat(review.rating)}</div>
-            <p>"${review.feedback}"</p>
-            <div class="review-meta">
-                <strong>${review.name}</strong>
-                <span class="date">${review.date}</span>
-            </div>
-        </div>
-    `).join('');
-        }
-
-        function resetStars() {
-            ratingInput.value = 5;
-            stars.forEach((s, index) => s.classList.toggle('active', index < 5));
-        }
-
-        function showPopup() {
-            popupOverlay.style.display = 'block';
-            successPopup.style.display = 'block';
-            setTimeout(closePopup, 3000);
-        }
-
-        function closePopup() {
-            popupOverlay.style.display = 'none';
-            successPopup.style.display = 'none';
-        }
-
-        // Initial render
-        renderReviews();
+        
     </script>
 
     <div class="chatbot-container">
