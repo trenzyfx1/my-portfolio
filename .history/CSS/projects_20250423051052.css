@@ -256,11 +256,4 @@ footer .footer-links span {
     margin: 0 8px;
 }
 
-@media(max-width: 480px ) {
-
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-    }
-}
+@me
