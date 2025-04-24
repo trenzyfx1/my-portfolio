@@ -1098,9 +1098,7 @@ i {
 }
 
 @media(max-width: 768px) {
-    .contact-form, .contact-info {
-        width: 90%;
-    }
+    .contact-form, contac
 }
 
 .contact-form button:hover {

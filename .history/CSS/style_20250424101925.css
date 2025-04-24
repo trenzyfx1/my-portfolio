@@ -1097,11 +1097,7 @@ i {
     cursor: pointer;
 }
 
-@media(max-width: 768px) {
-    .contact-form, .contact-info {
-        width: 90%;
-    }
-}
+med
 
 .contact-form button:hover {
     background: linear-gradient(to right, #00c97d, #6c2bd9);
