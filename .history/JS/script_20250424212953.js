@@ -18,24 +18,9 @@ sections.forEach(section => {
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleMenu();
-});
-
-document.addEventListener('click', (e) => {
-    if (navLinks.classList.contains('show') && !e.target.closest('#navLinks')) {
-        toggleMenu();
-    }
-});
-
-function toggleMenu() {
+hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show');
-    
-    hamburger.classList.toggle('active');
-    
-    document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
-}
+});
 
 const links = document.querySelectorAll('.nav-link');
 links.forEach(link => {

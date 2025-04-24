@@ -19,10 +19,11 @@ const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
 hamburger.addEventListener('click', (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // Prevent triggering the document click
     toggleMenu();
 });
 
+// Close menu when clicking outside
 document.addEventListener('click', (e) => {
     if (navLinks.classList.contains('show') && !e.target.closest('#navLinks')) {
         toggleMenu();
@@ -32,8 +33,10 @@ document.addEventListener('click', (e) => {
 function toggleMenu() {
     navLinks.classList.toggle('show');
     
+    // Animate hamburger icon
     hamburger.classList.toggle('active');
     
+    // Prevent scrolling when menu is open
     document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
 }
 

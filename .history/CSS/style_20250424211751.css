@@ -178,43 +178,6 @@ i {
     font-size: 25px;
 }
 
-#navLinks {
-    transition: transform 0.3s ease-in-out, opacity 0.2s ease;
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-#navLinks.show {
-    transform: translateX(0);
-    opacity: 1;
-}
-
-.hamburger {
-    transition: transform 0.3s ease;
-}
-
-.hamburger.active {
-    transform: rotate(90deg);
-}
-
-#navLinks::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-}
-
-#navLinks.show::before {
-    opacity: 1;
-    pointer-events: auto;
-}
-
 
 .project-info button:hover {
     background-color: #10b981;
@@ -1010,12 +973,14 @@ i {
     text-align: center;
     font-size: 2.5rem;
     line-height: 1;
-    width: 100%;
+    width: 80%;
     background: linear-gradient(90deg, #6c2bd9 0%, #2cb67d 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     margin: auto;
+    display: flex;
+    align-items: center;
     font-weight: bold;
     display: inline-block;
 }
@@ -1024,7 +989,7 @@ i {
     margin: 10px auto;
     text-align: center;
     font-size: 1.2rem;
-    width: 100%;
+    width: 80%;
     color: #ccc;
     font-weight: bold;
     display: inline-block;
@@ -1040,7 +1005,7 @@ i {
 }
 
 .section5 {
-    padding: 2pc 0 5pc 0;
+    padding: 5pc 0;
     color: #fff;
 }
 
@@ -1352,6 +1317,7 @@ i {
 
 @media(max-width: 1100px) {
 
+    .contact-form,
     .contact-info {
         width: 80%;
         margin: auto;

@@ -32,8 +32,10 @@ document.addEventListener('click', (e) => {
 function toggleMenu() {
     navLinks.classList.toggle('show');
     
+    // Animate hamburger icon
     hamburger.classList.toggle('active');
     
+    // Prevent scrolling when menu is open
     document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
 }
 
