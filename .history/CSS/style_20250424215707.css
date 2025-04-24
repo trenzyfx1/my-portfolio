@@ -1358,11 +1358,14 @@ i {
 @media(max-width: 1100px) {
 
     .contact-info,
-    .contact-form {
+    .contact {
         width: 80%;
         margin: auto;
     }
 
+    .contact-info {
+        text-align: center;
+    }
 
 }
 
@@ -1461,7 +1464,7 @@ i {
     }
 
     .tool {
-        justify-content: left;
+        justify-content: center;
     }
 }
 

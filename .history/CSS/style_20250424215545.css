@@ -301,20 +301,15 @@ i {
 }
 
 @keyframes infinityBounce {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0) scale(1);
     }
-
     25% {
         transform: translateY(8px) scale(1.02);
     }
-
     50% {
         transform: translateY(0) scale(1);
     }
-
     75% {
         transform: translateY(5px) scale(1.01);
     }
@@ -1361,8 +1356,11 @@ i {
     .contact-form {
         width: 80%;
         margin: auto;
-    }
+    } 
 
+.contact-info {
+    text-align: ;
+}
 
 }
 
@@ -1373,7 +1371,7 @@ i {
     body {
         width: 100%;
     }
-
+    
     .section2 {
         padding-top: 6pc;
     }
@@ -1461,7 +1459,7 @@ i {
     }
 
     .tool {
-        justify-content: left;
+        justify-content: center;
     }
 }
 
