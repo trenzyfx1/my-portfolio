@@ -1100,7 +1100,6 @@ i {
 @media(max-width: 768px) {
     .contact-form, .contact-info {
         width: 80%;
-        margin: auto;
     }
 }
 
