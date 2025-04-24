@@ -969,10 +969,6 @@ i {
     font-size: 2.5rem;
     line-height: 1;
     width: 100%;
-    background: linear-gradient(90deg, #6c2bd9 0%, #2cb67d 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     margin: auto;
     font-weight: bold;
     display: inline-block;
@@ -987,7 +983,7 @@ i {
 }
 
 .section5 {
-    padding: 5pc 0;
+    padding: 40px 20px;
     color: #fff;
 }
 
@@ -1098,7 +1094,8 @@ i {
 }
 
 .contact-form button:hover {
-    background: linear-gradient(to right, #00c97d, #6c2bd9);
+    background: linear-gradient(to right, #6c2bd9, #00c97d);
+
 }
 
 .portfolio-footer {
