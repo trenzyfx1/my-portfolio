@@ -178,6 +178,17 @@ i {
     font-size: 25px;
 }
 
+/* #navLinks {
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease;
+    transform: translateX(100%);
+    opacity: 0;
+} */
+
+/* #navLinks.show {
+    transform: translateX(0);
+    opacity: 1;
+} */
+
 .hamburger {
     transition: transform 0.3s ease;
 }

@@ -34,7 +34,7 @@ function toggleMenu() {
     
     hamburger.classList.toggle('active');
     
-    // document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
+    document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
 }
 
 const links = document.querySelectorAll('.nav-link');

@@ -37,13 +37,13 @@ function toggleMenu() {
     // document.body.style.overflow = navLinks.classList.contains('show') ? 'hidden' : '';
 }
 
-const links = document.querySelectorAll('.nav-link');
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        links.forEach(l => l.classList.remove('active'));
-        link.classList.add('active');
-    });
-});
+// const links = document.querySelectorAll('.nav-link');
+// links.forEach(link => {
+//     link.addEventListener('click', () => {
+//         links.forEach(l => l.classList.remove('active'));
+//         link.classList.add('active');
+//     });
+// });
 
 
 const pagesLink = document.querySelector('.dropdown > .nav-link');
