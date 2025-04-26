@@ -912,9 +912,9 @@ i {
 
 
 .section4 {
-    /* background-image:
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/aboutme.png'); */
+        url('../images/aboutme.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

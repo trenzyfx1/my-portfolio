@@ -236,9 +236,9 @@ i {
     padding-top: 1pc;
     align-items: center;
     flex-wrap: wrap;
-    /* background-image:
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/hero.png'); */
+        url('../images/hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -725,6 +725,7 @@ i {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
+
 .section3 {
     padding-top: 8pc;
     display: flex;
@@ -912,9 +913,9 @@ i {
 
 
 .section4 {
-    /* background-image:
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/aboutme.png'); */
+        url('../images/aboutme.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

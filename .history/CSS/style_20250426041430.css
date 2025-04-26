@@ -236,9 +236,9 @@ i {
     padding-top: 1pc;
     align-items: center;
     flex-wrap: wrap;
-    /* background-image:
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/hero.png'); */
+        /* url('../images/hero.png'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -481,84 +481,6 @@ i {
     color: #ccc;
 }
 
-.my-journey {
-    padding: 5pc 0;
-}
-
-.work-experience h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    color: #000;
-}
-
-.work-experience h2 span {
-    background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.experience-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.experience-card {
-    position: relative;
-    background: #3a1c72;
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    width: 38%;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.experience-card h3,
-.experience-card p {
-    text-align: left;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-}
-
-.experience-card img {
-    width: 100px;
-    height: 100px;
-    margin-top: 20px;
-}
-
-.glow-border {
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #9a5cff, #ff3dff, #9a5cff, #ff3dff);
-    background-size: 300%;
-    border-radius: 12px;
-    animation: glow-animation 4s linear infinite;
-    z-index: -1;
-}
-
-@keyframes glow-animation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .project-container {
     max-width: 1300px;
     margin: auto;
@@ -723,6 +645,86 @@ i {
     color: #000;
     transform: scale(1.01);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.my-journey {
+    padding: 5pc 0;
+}
+
+.work-experience h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #000;
+}
+
+.work-experience h2 span {
+    background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.experience-card {
+    position: relative;
+    background: #3a1c72;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    width: 38%;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.experience-card h3,
+.experience-card p {
+    text-align: left;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-card img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.glow-border {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #9a5cff, #ff3dff, #9a5cff, #ff3dff);
+    background-size: 300%;
+    border-radius: 12px;
+    animation: glow-animation 4s linear infinite;
+    z-index: -1;
+}
+
+@keyframes glow-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .section3 {
@@ -912,9 +914,9 @@ i {
 
 
 .section4 {
-    /* background-image:
+    background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/aboutme.png'); */
+        url('../images/aboutme.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
