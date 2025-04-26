@@ -91,6 +91,7 @@ body {
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url('../images/projects2.png');
     background-size: cover;
+    height: ;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -233,6 +234,7 @@ body {
 }
 
 footer {
+    margin-top: 5pc;
     background: #0f0f0f;
     color: #ccc;
     text-align: center;
@@ -261,7 +263,7 @@ footer .footer-links span {
     margin: 0 8px;
 }
 
-@media(max-width: 1000px ) {
+@media(max-width: 480px ) {
 
     .projects-grid {
         display: grid;

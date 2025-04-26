@@ -212,6 +212,17 @@ i {
     transform: translateY(0);
 }
 
+.milestone-banner {
+    margin-top: 4.9pc;
+    background-color: #1e0d3d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 #visitor-count {
     text-align: center;
     font-size: 14px;
@@ -222,12 +233,12 @@ i {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    padding-top: 9pc;
+    padding-top: 1pc;
     align-items: center;
     flex-wrap: wrap;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/hero4.png');
+        url('../images/hero2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -477,7 +488,7 @@ i {
 .work-experience h2 {
     font-size: 2.5rem;
     text-align: center;
-    color: #fff;
+    color: #000;
 }
 
 .work-experience h2 span {
@@ -556,9 +567,15 @@ i {
 .projects-section {
     padding: 4rem 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    padding-top: 1pc;
+    align-items: center;
+    flex-wrap: wrap;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../images/projects.png');
+        url('../images/hero2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -577,7 +594,7 @@ i {
     font-size: 1rem;
     max-width: 700px;
     margin: 0 auto 3rem auto;
-    color: #ccc;
+    color: #a1a1aa;
 }
 
 .projects-grid {
@@ -1591,10 +1608,6 @@ i {
         display: none;
     }
 
-    .section1 {
-        margin: 0 auto;
-    }
-
     .me img {
         max-width: 100%;
         height: auto;
@@ -1641,10 +1654,6 @@ i {
     .about-me {
         text-align: center;
         font-size: 16px;
-    }
-
-    .contact-p {
-        display: none;
     }
 
 }

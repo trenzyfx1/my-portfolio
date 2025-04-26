@@ -222,7 +222,7 @@ i {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    padding-top: 9pc;
+    ma-top: 9pc;
     align-items: center;
     flex-wrap: wrap;
     background-image:
