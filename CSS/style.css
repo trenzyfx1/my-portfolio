@@ -251,7 +251,6 @@ i {
 
 .head-img {
     width: 400px;
-    filter: grayscale(100%);
     height: auto;
     border-radius: 45%;
     max-width: 100%;
@@ -283,10 +282,6 @@ i {
     75% {
         transform: translateY(5px) scale(1.01);
     }
-}
-
-.head-img:hover {
-    filter: grayscale(0);
 }
 
 .scroll-zoom img {
@@ -564,7 +559,7 @@ i {
     background-repeat: no-repeat;
 }
 
-.section-heading {
+.section-heading span{
     font-size: 2.5rem;
     background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
     -webkit-background-clip: text;
@@ -942,7 +937,7 @@ i {
     max-width: 600px;
 }
 
-.about-content h2 {
+.about-content h2 span{
     font-size: 32px;
     margin-bottom: 10px;
     background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
@@ -980,26 +975,189 @@ i {
     background-color: #1e0d3d;
 }
 
-.p2 {
-    display: none;
+.blog-teaser {
+    background-size: cover;
+    background-position: center;
+    padding-top: 4rem;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.blog-teaser-content {
+    position: relative;
+    z-index: 2;
+}
+
+.blog-teaser-content h2 {
+    font-size: 40px;
+    margin: 0;
+    line-height: 1;
+}
+
+.blog-teaser-content h2 span {
+    background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 40px;
+}
+
+.blog-teaser-content p {
+    color: #ccc;
+}
+
+.latest-blogs {
+    padding: 4rem 2rem 0 2rem;
+}
+
+.blog-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blog-card {
+    background: #222;
+    padding: 1rem;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blog-card h3 {
+    color: #fff;
+    margin: 1rem 0 0.5rem;
+}
+
+.blog-card p,
+em {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #3a1c72;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background: #1e0d3d;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card.premium {
+    border: 2px solid #744bf0;
+}
+
+.crown-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #744bf0;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #111;
+    font-weight: bold;
+}
+
+.blog-time {
+    display: block;
+    margin-top: 0.5rem;
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.premium-btn {
+    background: linear-gradient(135deg, #6c2bd9 0%, #EE0979 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+}
+
+.premium-btn:hover {
+    background: linear-gradient(135deg, #EE0979 0%, #744bf0 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.premium-btn:active {
+    transform: scale(0.98)
+}
+
+.premium-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    margin-bottom: 8px;
+}
+
+.premium-btn[data-tooltip]:hover::after {
+    opacity: 1;
+    margin-bottom: 12px;
 }
 
 #contact-us {
     padding-top: 6pc;
 }
 
-.contact-heading {
+.contact-heading{
     text-align: center;
     font-size: 2.5rem;
     line-height: 1;
     width: 100%;
+    margin: auto;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.contact-heading span {
     background: linear-gradient(90deg, #6c2bd9 0%, #2cb67d 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    margin: auto;
-    font-weight: bold;
-    display: inline-block;
 }
 
 .contact-p {
