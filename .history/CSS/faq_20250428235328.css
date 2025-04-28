@@ -181,12 +181,7 @@ footer .footer-links span {
     margin: 0 8px;
 }
 
-@media (max-width: 768px) {
-    
-    .logo-section {
-        margin: 0;
-    }
-}
+@media (max-width: 768px)
 
 @media (max-width: 550px) {
     header h2 {
