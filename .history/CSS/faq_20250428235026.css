@@ -1,0 +1,217 @@
+/* DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Manrope:wght@400;600&family=Urbanist:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap');
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #000;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.header {
+    background: #0f0f0f;
+    padding: 1rem 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* margin-left: 40px; */
+}
+
+.logo {
+    width: 150px;
+}
+
+.my-resume {
+    margin-right: 50px;
+    border: 2px solid #ccc;
+    background: none;
+    gap: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 10px;
+    color: #ccc;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.my-resume:hover {
+    background-color: #fff;
+    border: 2px solid #0a0a0a;
+    color: #000;
+    transform: scale(1.01);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.6s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.faq-container {
+    background: #fff;
+    width: 70%;
+    margin: 8pc auto;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.faq-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 97%;
+    padding: 15px;
+    background: #e0dfdf;
+    text-transform: lowercase;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #9e9d9d;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f1f1f1;
+    border-left: 3px solid #7f5af0;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 25px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer {
+    margin-top: 5pc;
+    background: #0f0f0f;
+    color: #ccc; 
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #7f5af0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: red; 
+    text-decoration: underline;
+}
+
+footer .footer-links {
+    margin-top: 5px;
+}
+
+footer .footer-links span {
+    color: #888;
+    margin: 0 8px;
+}
+
+@media (max-width: 550px) {
+    header h2 {
+        display: none;
+    }
+
+    .faq-title {
+        font-size: 6vw;
+    }
+
+    .faq-subtitle {
+        font-size: 3.5vw;
+    }
+
+    .faq-question {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .potfolio img {
+        width: 15vw;
+    }
+
+    .resume .my-resume {
+        height: 12vw;
+    }
+
+    .resume {
+      position: relative;
+      bottom: 10px;
+    }
+
+}

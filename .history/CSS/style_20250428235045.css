@@ -1648,10 +1648,6 @@ em {
         width: 100%;
     }
 
-    .logo-section {
-        margin: 0;
-    }
-
     .nav-links {
         flex-direction: column;
         background: #111;

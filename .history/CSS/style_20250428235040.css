@@ -47,7 +47,7 @@ button,
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-left: 40px;
+    /* margin-left: 40px; */
 }
 
 .logo {
@@ -1646,10 +1646,6 @@ em {
 
     body {
         width: 100%;
-    }
-
-    .logo-section {
-        margin: 0;
     }
 
     .nav-links {
