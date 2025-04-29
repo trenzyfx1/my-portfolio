@@ -1326,7 +1326,7 @@ em {
 
 @keyframes pulse {
     0% {
-        box-shadow: 0 0 0 0 #7f5af0;
+        box-shadow: 0 0 0 0 rgba(255, 94, 94, 0.7);
     }
 
     70% {

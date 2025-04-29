@@ -547,7 +547,7 @@ i {
     background-repeat: no-repeat;
 }
 
-.section-heading span {
+.section-heading span{
     font-size: 2.5rem;
     background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
     -webkit-background-clip: text;
@@ -925,7 +925,7 @@ i {
     max-width: 600px;
 }
 
-.about-content h2 span {
+.about-content h2 span{
     font-size: 32px;
     margin-bottom: 10px;
     background: linear-gradient(90deg, #7f5af0 0%, #2cb67d 100%);
@@ -1131,7 +1131,7 @@ em {
     padding-top: 6pc;
 }
 
-.contact-heading {
+.contact-heading{
     text-align: center;
     font-size: 2.5rem;
     line-height: 1;
@@ -1306,7 +1306,7 @@ em {
     margin-bottom: 40px;
     display: flex;
     justify-content: center;
-}
+} 
 
 .like-button {
     display: inline-flex;
@@ -1322,37 +1322,29 @@ em {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     animation: pulse 2s infinite;
-}
+  }
 
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 #7f5af0;
-    }
-
-    70% {
-        box-shadow: 0 0 0 10px rgba(255, 94, 94, 0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(255, 94, 94, 0);
-    }
-}
-
-.like-button:hover {
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 94, 94, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 94, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 94, 94, 0); }
+  }
+  
+  .like-button:hover {
     background-color: #A259FF;
     color: #ffffff;
     transform: scale(1.05);
-}
-
-.heart-icon {
+  }
+  
+  .heart-icon {
     width: 24px;
     height: 24px;
     margin-right: 8px;
-}
-
-#like-count {
+  }
+  
+  #like-count {
     color: #ffffff;
-}
+  }  
 
 .portfolio-footer {
     background-image:
