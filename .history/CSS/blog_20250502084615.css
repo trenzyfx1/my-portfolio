@@ -1,0 +1,147 @@
+/* DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Manrope:wght@400;600&family=Urbanist:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap');
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100vh;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    scroll-behavior: smooth;
+    background-color: #0a0a0a;
+}
+
+.entry-screen {
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .entry-container {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #;
+  }
+  
+  .entry-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .entry-btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .join {
+    background: orange;
+    color: black;
+  }
+  
+  .free {
+    background: #444;
+    color: white;
+  }
+  
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: #f1f1f1;
+  }
+  
+  .blog-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #111;
+    border-bottom: 1px solid #333;
+  }
+  
+  .blog-header h1 {
+    font-size: 2.5rem;
+    color: orange;
+  }
+  
+  .meta {
+    font-size: 0.9rem;
+    color: gray;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .blog-card {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-card h2 a {
+    color: lightgreen;
+    text-decoration: none;
+  }
+  
+  .blog-card .excerpt {
+    color: #ccc;
+  }
+  
+  .article-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+  
+  .featured-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  pre {
+    background: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+  }
+  
+  .blog-footer {
+    text-align: center;
+    padding: 2rem;
+    background: #111;
+    font-size: 0.8rem;
+    border-top: 1px solid #333;
+  }
+  
