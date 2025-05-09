@@ -74,7 +74,7 @@ const scrollObserver = new IntersectionObserver((entries) => {
 scrollElements.forEach((el) => scrollObserver.observe(el));
 
 const typeEffect = document.getElementById("type-effect");
-const titles = ["Web Developer", "Problem Solver", "Tech Enthusiast"];
+const titles = ["web Developer", "Problem Solver", "Tech Enthusiast"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

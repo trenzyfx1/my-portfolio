@@ -8,21 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const chatInput = document.getElementById("chat-input");
     const sendBtn = document.getElementById("send-btn");
     const suggestionsContainer = document.getElementById("chat-suggestions");
-    const placeholder = document.getElementById("chat-placeholder");
-    const botIntro = document.querySelector('.bot-intro');
-
-
-    chatToggle.addEventListener('click', () => {
-        chatbot.classList.toggle('active');
-        botIntro.style.display = 'none';
-        chatToggle.style.display = 'none';
-    });
-
-    closeChat.addEventListener('click', () => {
-        chatbot.classList.remove('active');
-        chatToggle.style.display = 'block';
-    });
-
 
     let messageHistory = [];
 
@@ -86,22 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function highlightKeywords(text) {
+        // Turn URLs into clickable links
         const urlPattern = /(https?:\/\/[^\s]+)/g;
         text = text.replace(urlPattern, `<a href="$1" target="_blank" class="highlight-link">$1</a>`);
 
+        // Turn email into mailto
         const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z]{2,}\b/gi;
         text = text.replace(emailPattern, `<a href="mailto:$&" class="highlight-link">$&</a>`);
 
         return text;
     }
-
-    chatInput.addEventListener("input", () => {
-        if (chatInput.value.trim() !== "") {
-            placeholder.style.display = "none";
-        } else {
-            placeholder.style.display = "block";
-        }
-    });
 
     function getBotResponse(userMessage) {
         const keywords = {
@@ -130,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "github": "🐙 You can check out my code on GitHub: [https://github.com/trenzyfx1]",
 
             // 🔹 Services & Skills
-            "work samples": "💼 Go to the Projects section to see my work samples. You'll love what you find there!",
+            "workSample": "💼 Go to the *Projects* section to see my work samples. You'll love what you find there!",
             "services": "🛠️ I specialize in frontend development, UI/UX design, and responsive web design.",
             "technologies": "⚡ I work with HTML, CSS, JavaScript, and Tailwind CSS.",
             "stack": "🚀 My tech stack includes HTML, CSS, JavaScript, and Tailwind CSS.",
@@ -164,6 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return "🤔 I'm not sure about that. Can you be more specific or ask differently?";
     }
 
+    // 🔥 Auto Suggestion Buttons
     const suggestions = [
         "What services do you offer?",
         "Where can I download your resume?",
@@ -183,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Bot loaded successfully with all enhancements.");
 });
 
-
+// External Link Warning
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', function (e) {
         const isExternal = link.hostname !== window.location.hostname;
@@ -194,7 +174,7 @@ document.querySelectorAll('a').forEach(link => {
     });
 });
 
-
+// Welcome Message Prompt Logic
 document.addEventListener("DOMContentLoaded", function () {
     const autoOpenMessage = document.getElementById('auto-open-message');
     const chatbot = document.querySelector('.chatbot');

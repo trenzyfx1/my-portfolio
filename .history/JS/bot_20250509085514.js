@@ -164,6 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return "🤔 I'm not sure about that. Can you be more specific or ask differently?";
     }
 
+    // 🔥 Auto Suggestion Buttons
     const suggestions = [
         "What services do you offer?",
         "Where can I download your resume?",
@@ -183,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Bot loaded successfully with all enhancements.");
 });
 
-
+// External Link Warning
 document.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', function (e) {
         const isExternal = link.hostname !== window.location.hostname;
@@ -194,7 +195,7 @@ document.querySelectorAll('a').forEach(link => {
     });
 });
 
-
+// Welcome Message Prompt Logic
 document.addEventListener("DOMContentLoaded", function () {
     const autoOpenMessage = document.getElementById('auto-open-message');
     const chatbot = document.querySelector('.chatbot');

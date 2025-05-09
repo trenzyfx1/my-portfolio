@@ -76,6 +76,7 @@
 
     <script>
         function unlockPremium() {
+            // Fake unlock (replace this with Paystack logic later)
             localStorage.setItem("premiumUser", "true");
             showPremiumContent();
             alert("You're now subscribed! Reloaded content unlocked. 🔓");
@@ -87,6 +88,7 @@
             document.getElementById("blogList").classList.toggle("hidden", !isPremium);
         }
 
+        // Check on page load
         window.onload = showPremiumContent;
     </script>
 

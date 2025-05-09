@@ -194,7 +194,7 @@ document.querySelectorAll('a').forEach(link => {
     });
 });
 
-
+// Welcome Message Prompt Logic
 document.addEventListener("DOMContentLoaded", function () {
     const autoOpenMessage = document.getElementById('auto-open-message');
     const chatbot = document.querySelector('.chatbot');

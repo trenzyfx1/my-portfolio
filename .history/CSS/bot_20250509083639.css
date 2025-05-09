@@ -262,7 +262,7 @@
 }
 
 .suggestion-btn {
-    background: #7f5af0;
+    background: #;
     color: white;
     border: none;
     border-radius: 20px;
@@ -273,34 +273,5 @@
 }
 
 .suggestion-btn:hover {
-    background: #6946d3;
-}
-
-.chat-placeholder {
-    color: #999;
-    font-style: italic;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.95rem;
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.chatbot {
-    display: none;
-    /* Initially hide the chatbot */
-}
-
-.chatbot.active {
-    display: block;
-    /* Show the chatbot when active */
+    background: #ea580c;
 }
