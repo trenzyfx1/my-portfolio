@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
 
     }
-    
     sendBtn.addEventListener("click", sendMessage);
 
     chatToggle.addEventListener("click", () => {

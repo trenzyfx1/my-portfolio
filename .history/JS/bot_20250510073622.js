@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeChat = document.querySelector(".close-chat");
     const chatBody = document.getElementById("chat-body");
     const chatInput = document.getElementById("chat-input");
-    const sendBtn = document.querySelector("#send-btn");
+    const sendBtn = document.getElementById("send-btn");
     const suggestionsContainer = document.getElementById("chat-suggestions");
     const placeholder = document.getElementById("chat-placeholder");
     const botIntro = document.querySelector('.bot-intro');
@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!chatToggle || !chatbot || !closeChat || !chatBody || !chatInput || !sendBtn) {
         console.error("Bot initialization failed. Some elements are missing.");
         return;
-
     }
-    
-    sendBtn.addEventListener("click", sendMessage);
 
     chatToggle.addEventListener("click", () => {
         chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
@@ -42,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chatbot.style.display = "none";
     });
 
+    sendBtn.addEventListener("click", sendMessage);
     chatInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") sendMessage();
     });

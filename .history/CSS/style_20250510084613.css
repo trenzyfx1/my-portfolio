@@ -93,9 +93,7 @@ nav {
 
 .dropdown-menu {
     position: absolute;
-    top: 3.2pc;
-    /* border: 1px solid red; */
-    padding-top: 8px;
+    top: 3.4pc;
     right: -3pc;
     background: #111;
     flex-direction: column;
@@ -146,7 +144,7 @@ nav {
 
 .contact-btn {
     background: transparent;
-    border: 1px solid #8c52ff;
+    border: 2px solid #8c52ff;
     padding: 6px 16px;
     border-radius: 20px;
     color: #fff;
@@ -639,7 +637,7 @@ i {
 
 .project-card {
     background-color: #1f1f1f;
-    border-radius: 8px;
+    border-radius: 16px;
     overflow: hidden;
     transition: transform 0.3s ease;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);

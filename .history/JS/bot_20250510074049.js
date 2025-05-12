@@ -29,10 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!chatToggle || !chatbot || !closeChat || !chatBody || !chatInput || !sendBtn) {
         console.error("Bot initialization failed. Some elements are missing.");
         return;
-
     }
-    
-    sendBtn.addEventListener("click", sendMessage);
 
     chatToggle.addEventListener("click", () => {
         chatbot.style.display = chatbot.style.display === "block" ? "none" : "block";
@@ -42,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chatbot.style.display = "none";
     });
 
+    sendBtn.addEventListener("click", sendMessage);
     chatInput.addEventListener("keypress", function (e) {
         if (e.key === "Enter") sendMessage();
     });
