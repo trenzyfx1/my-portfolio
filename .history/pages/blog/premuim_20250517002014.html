@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Blogs </title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f5f5;
+            color: #222;
+            padding: 2rem;
+        }
+
+        .locked {
+            text-align: center;
+            background: #fffbe6;
+            border: 1px solid #ffdd57;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .blog-list a {
+            display: block;
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: 0.2s ease;
+        }
+
+        .blog-list a:hover {
+            transform: translateY(-3px);
+            background: #fafafa;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .pay-btn {
+            background: orange;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔥 Premium Blog Articles</h1>
+
+    <div id="locked" class="locked">
+        <p>This section is for premium members only. Subscribe to unlock all articles below 👇</p>
+        <button class="pay-btn" onclick="unlockPremium()">Pay ₦2,000 to Access</button>
+    </div>
+
+    <div id="blogList" class="blog-list hidden">
+        <a href="/pages/blog/articles/premium/session-management.html">1. Session Management across Subdomains</a>
+        <a href="/pages/blog/articles/premium/js-animations.html">2. Advanced JavaScript Animations Without
+            Libraries</a>
+        <a href="/pages/blog/articles/premium/ux-psychology.html">3. Psychology Behind UX in Web Design</a>
+        <a href="/pages/blog/articles/premium/chatbot-no-ai.html">4. Building a Smart Chatbot Without AI Tools</a>
+        <a href="/pages/blog/articles/premium/data-security.html">5. Secure Client-Side Data Storage</a>
+    </div>
+
+    <script>
+        function unlockPremium() {
+            localStorage.setItem("premiumUser", "true");
+            showPremiumContent();
+            alert("You're now subscribed! Reloaded content unlocked. 🔓");
+        }
+
+        function showPremiumContent() {
+            const isPremium = localStorage.getItem("premiumUser") === "true";
+            document.getElementById("locked").style.display = isPremium ? "none" : "block";
+            document.getElementById("blogList").classList.toggle("hidden", !isPremium);
+        }
+
+        window.onload = showPremiumContent;
+    </script>
+
+</body>
+
+</html>

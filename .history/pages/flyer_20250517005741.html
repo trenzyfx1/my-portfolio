@@ -1,0 +1,184 @@
+<!-- DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PZH96K3Z');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download flyer | Christian Treasure</title>
+
+    <link rel="icon" href="/images/favicon.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/bot.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Manrope:wght@400;600&family=Urbanist:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap');
+
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        div {
+            /* width: 70%; */
+            margin: 50px 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #000;
+        }
+
+        div img {
+            width: 500px;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background-color: #8c52ff;
+            transition: all 0.3s;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background: #3a1c72;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            position: relative;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .back-home-btn:hover {
+            color: #0056b3;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chatbot-container {
+            butt
+        }
+
+        @media (max-width: 545px) {
+
+            div img {
+                width: 80vw;
+            }
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXS2HRSNWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXS2HRSNWE');
+    </script>
+
+    <script type="text/javascript" data-cmp-ab="1"
+        src="https://cdn.consentmanager.net/delivery/autoblocking/f34c3a5322528.js"
+        data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16">
+        </script>
+</head>
+
+<body>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZH96K3Z" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+
+    <div class="section">
+        <a href="/" class="back-home-btn">← Back to Home</a>
+
+        <img src="../images/flyer.png" alt="">
+
+        <a href="../images/flyer.png" download="Trenzy-Flyer.png" class="download-btn">Download Flyer</a>
+    </div>
+
+    <div class="chatbot-container">
+        <div class="bot-intro">Hi, how can I assist?</div>
+
+        <div class="chatbot">
+            <div class="chat-header">
+                <span>Trenzy Bot 🤖</span>
+                <button class="close-chat">&times;</button>
+            </div>
+
+            <div class="chat-body" id="chat-body">
+                <div class="chat-placeholder" id="chat-placeholder">💬 How can we help you?</div>
+            </div>
+
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+
+            <!-- 🔥 Suggestions go here -->
+            <!-- <div id="chat-suggestions" class="chat-suggestions"></div> -->
+        </div>
+
+        <button class="chat-toggle">💬</button>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll(".section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <script src="../JS/bot.js"></script>
+</body>
+
+</html>

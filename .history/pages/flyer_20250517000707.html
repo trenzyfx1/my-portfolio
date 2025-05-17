@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download flyer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@400;600&family=Manrope:wght@400;600&family=Urbanist:wght@400;600&family=Space+Grotesk:wght@400;600&display=swap');
+
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* height: 100vh; */
+            display: flex;
+            border: 1px solid red;
+            justify-content: center;
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        div {
+            /* width: 70%; */
+            margin: 80px 0;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #000;
+        }
+
+        div img {
+            width: 500px;
+        }
+
+        .download-btn {
+            margin-top: 20px;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 20px;
+            background-color: #8c52ff;
+            transition: all 0.3s;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background: #3a1c72;
+        }
+
+        .back-home-btn {
+            display: inline-block;
+            margin-: 20px;
+            position: relative;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .back-home-btn:hover {
+            color: #0056b3;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.9s ease, transform 0.9s ease;
+        }
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="section">
+        <a href="/" class="back-home-btn">← Back to Home</a>
+
+        <img src="../images/flyer.png" alt="">
+
+        <a href="../images/flyer.png" download="Trenzy-Flyer.png" class="download-btn">Download Flyer</a>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll(".section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+
+</html>

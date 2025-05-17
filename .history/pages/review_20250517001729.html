@@ -1,0 +1,274 @@
+<!-- DESIGNED AND DEVELOPED BY ME: CHRISTIAN DAVID TREASURE - PROFESSIONAL FRONT-END DEVELOPER -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PZH96K3Z');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="author" content="Christian Treasure (Trenzy)">
+    <meta name="description"
+        content="Check out what clients are saying about Trenzy Tech. Real reviews from worldwide clients praising clean code, responsive design, and top-tier delivery.">
+    <meta name="keywords"
+        content="Trenzy Tech reviews, client testimonials, frontend developer feedback, web dev reviews, Trenzy portfolio">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/images/favicon.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/bot.css">
+    <link rel="stylesheet" href="../CSS/review.css" as="style">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXS2HRSNWE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-XXS2HRSNWE');
+    </script>
+
+    <script type="text/javascript" data-cmp-ab="1"
+        src="https://cdn.consentmanager.net/delivery/autoblocking/f34c3a5322528.js"
+        data-cmp-host="c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16">
+        </script>
+
+    <title>chriClient Reviews</title>
+</head>
+
+<body>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZH96K3Z" height="0" width="0"
+            style="display:none;visibility:hidden">
+        </iframe>
+    </noscript>
+
+    <a href="/" class="back-home-btn">← Back to Home</a>
+
+
+    <h1 class="section">Client Reviews</h1>
+
+    <div class="reviews-container section" id="reviewsContainer">
+    </div>
+
+    <button class="see-more-btn section" id="seeMoreBtn">See More Reviews</button>
+
+    <div class="review-form section">
+        <h2>Leave Your Review</h2>
+        <form id="reviewForm" action="https://formspree.io/f/xeoaegbr" method="POST">
+            <input type="hidden" name="rating" id="rating-value" value="5">
+            <div class="stars" id="star-rating">
+                <span data-value="1">★</span>
+                <span data-value="2">★</span>
+                <span data-value="3">★</span>
+                <span data-value="4">★</span>
+                <span data-value="5">★</span>
+            </div>
+            <textarea name="feedback" id="message" placeholder="Share your experience..." required></textarea>
+            <input type="text" name="name" placeholder="Your name (optional)">
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="successPopup">
+        <span class="popup-close" onclick="closePopup()">×</span>
+        <h3>Thank You! 🎉</h3>
+        <p>Your review has been added successfully.</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <a href="/" class="back-home-btn">← Back to Home</a>
+
+    <script>
+        const sections = document.querySelectorAll(".section");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+            });
+        }, { threshold: 0.3 });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        let defaultReviews = [
+            {
+                rating: 5,
+                feedback: "Love what you doing man🤝👍💜",
+                name: "AJIDE SAMSON",
+                date: "may 15, 2025"
+            },
+            {
+                rating: 5,
+                feedback: "This website is very accessible I highly Recommend the host of this platform",
+                name: "Chrishandsome",
+                date: "may 11, 2025"
+            },
+
+            {
+                rating: 5,
+                feedback: "Yo bro is good 😎😎",
+                name: "Hassan idan",
+                date: "may 11, 2025"
+            },
+
+            {
+                rating: 5,
+                feedback: "He is a very good front end developer, I highly recommend him",
+                name: "Anonymous",
+                date: "April 29, 2025"
+            },
+
+            {
+                rating: 5,
+                feedback: "If only there's 6 stars to give, I would have given him, dude is worth more than 5 stars honestly",
+                name: "Badass Nigga",
+                date: "April 29, 2025"
+            },
+
+            {
+                rating: 5,
+                feedback: "He is more than 5 star ⭐️ indeed a good service, would recommend to anyone always.",
+                name: "Joseph Daniel",
+                date: "April 27, 2025"
+            }
+        ];
+
+        let savedReviews = JSON.parse(localStorage.getItem('websiteReviews')) || [];
+        let reviews = [...defaultReviews, ...savedReviews];
+
+
+        const reviewsContainer = document.getElementById('reviewsContainer');
+        const seeMoreBtn = document.getElementById('seeMoreBtn');
+        const reviewForm = document.getElementById('reviewForm');
+        const stars = document.querySelectorAll('#star-rating span');
+        const ratingInput = document.getElementById('rating-value');
+        const popupOverlay = document.getElementById('popupOverlay');
+        const successPopup = document.getElementById('successPopup');
+
+        stars.forEach((star, index) => {
+            star.addEventListener('click', function () {
+                const value = this.getAttribute('data-value');
+                ratingInput.value = value;
+                stars.forEach((s, i) => s.classList.toggle('active', i < value));
+            });
+            star.classList.toggle('active', index < 5);
+        });
+
+        reviewForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            formData.append('_subject', 'New Review from Portfolio');
+            formData.append('date', new Date().toISOString());
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        const newReview = {
+                            rating: parseInt(ratingInput.value),
+                            feedback: this.elements.feedback.value,
+                            name: this.elements.name.value || "Anonymous",
+                            date: new Date().toLocaleDateString('en-US', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                            })
+                        };
+
+                        reviews.unshift(newReview);
+                        localStorage.setItem('websiteReviews', JSON.stringify(reviews));
+                        renderReviews();
+                        showPopup();
+                        this.reset();
+                        resetStars();
+                    } else {
+                        alert("Error submitting review. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    alert("Network error. Please check your connection.");
+                });
+        });
+
+        let showAll = false;
+        seeMoreBtn.addEventListener('click', function () {
+            showAll = !showAll;
+            document.querySelectorAll('.review').forEach(review => {
+                review.classList.toggle('expanded', showAll);
+            });
+            this.textContent = showAll ? 'Show Less' : 'See More Reviews';
+        });
+
+        function renderReviews() {
+            reviewsContainer.innerHTML = reviews.map((review, index) => `
+        <div class="review ${index < 3 ? 'expanded' : ''}">
+            <div class="rating">${'★'.repeat(review.rating)}</div>
+            <p>"${review.feedback}"</p>
+            <div class="review-meta">
+                <strong>${review.name}</strong>
+                <span class="date">${review.date}</span>
+            </div>
+        </div>
+    `).join('');
+        }
+
+        function resetStars() {
+            ratingInput.value = 5;
+            stars.forEach((s, index) => s.classList.toggle('active', index < 5));
+        }
+
+        function showPopup() {
+            popupOverlay.style.display = 'block';
+            successPopup.style.display = 'block';
+            setTimeout(closePopup, 3000);
+        }
+
+        function closePopup() {
+            popupOverlay.style.display = 'none';
+            successPopup.style.display = 'none';
+        }
+
+        renderReviews();
+    </script>
+
+    <div class="chatbot-container">
+        <div class="bot-intro">Hi, how can I assist?</div>
+
+        <div class="chatbot">
+            <div class="chat-header">
+                <span>Trenzy Bot 🤖</span>
+                <button class="close-chat">&times;</button>
+            </div>
+            <div class="chat-body" id="chat-body"></div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+        <button class="chat-toggle">💬</button>
+
+    </div>
+
+    <script src="../JS/bot.js" defer></script>
+</body>
+
+</html>
