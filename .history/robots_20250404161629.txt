@@ -1,0 +1,10 @@
+User-agent: *
+Disallow:
+Sitemap: https://christian-treasure.vercel.app/sitemap.xml
+
+
+<!-- Linking CSS from a folder above -->
+<link rel="stylesheet" href="../css/style.css">
+
+<!-- Linking JS from a folder above -->
+<script src="../js/script.js"></script>
